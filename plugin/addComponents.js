@@ -3,9 +3,7 @@ const plugin = require('tailwindcss/plugin')
 module.exports = plugin(({ addComponents, theme }) => {
     addComponents({
         '.btn': {
-            padding: `${theme('spacing.1')}  ${theme('spacing.2')}`,
-            border: `1px solid ${theme('colors.gray.400')}`,
-            borderRadius: theme('borderRadius.md'),
+            '@apply px-1 border border-solid border-gray-400 rounded-md': {},
             backgroundColor: theme('colors.gray.100'),
             color: theme('colors.gray.900'),
             width: theme('width.full'),
