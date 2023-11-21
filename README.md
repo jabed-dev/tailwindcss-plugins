@@ -1,4 +1,4 @@
-# tailwindcss-plugin
+# tailwindcss-plugins
 how to create tailwindcss plugins
 
 **addBase**\
