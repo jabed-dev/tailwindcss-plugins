@@ -1,5 +1,5 @@
 # tailwindcss-plugin
-how to create tailwindcss plugin
+how to create tailwindcss plugins
 
 **addBase**\
 **addVariant**\
