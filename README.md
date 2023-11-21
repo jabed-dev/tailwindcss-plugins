@@ -1,10 +1,11 @@
 # tailwindcss-plugins
 how to create tailwindcss plugins
 
-**addBase**\
+**[addBase](plugins/addBase.js)**\
 **addVariant**\
 **addUtilities**\
 **addComponents**\
 **matchVariant**\
 **matchUtilities**\
-**matchComponents**
+**matchComponents**\
+**match-with-modifier**
