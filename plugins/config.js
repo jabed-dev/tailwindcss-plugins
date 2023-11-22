@@ -1,4 +1,5 @@
 const plugin = require('tailwindcss/plugin')
+const defaultConfig = require('tailwindcss/defaultConfig') // (default)
 
 module.exports = {
   content: ['./index.html'],
@@ -8,7 +9,7 @@ module.exports = {
   },
   plugins: [
     plugin(({ config }) => {
-      // config values in the user’s and default Tailwind configuration 
+      // config values in the user’s and default Tailwind configuration (custom + default)
       console.log(config().theme.accentColor.red)
       console.log(config('theme.accentColor.red'))
       console.log(config('content').files)
