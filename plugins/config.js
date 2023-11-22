@@ -11,6 +11,9 @@ module.exports = {
       console.log(config().theme.accentColor.red)
       console.log(config('theme.accentColor.red'))
       console.log(config('content').files)
+      // if config('incorrect') undefined then return second argument
+      console.log(config('theme.incorrect', {x: 'abc'}))
+      // return > {x: 'abc'}
     }),
   ],
 }
