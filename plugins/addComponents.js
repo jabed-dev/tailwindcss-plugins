@@ -23,20 +23,21 @@ module.exports = {
             '&:focus': {
               outline: `1px solid ${theme('colors.gray.400')}`,
             },
-            '.dark &': {
-              backgroundColor: theme('colors.gray.800'),
-              color: theme('colors.gray.200'),
-              '&:hover': {
-                backgroundColor: 'rgba(55, 65, 81, 0.8)',
-                color: 'rgba(229, 231, 235, 0.9)',
-              },
-            },
+            // '.dark &': { ... }, use with another class
             [`@media (min-width: ${theme('screens.sm')})`]: {
               '&': {
                 maxWidth: theme('maxWidth.md'),
               },
             },
           },
+          '.btn-dark': { // use with dark: variant like dark:btn-dark
+            backgroundColor: theme('colors.gray.800'),
+            color: theme('colors.gray.200'),
+            '&:hover': {
+              backgroundColor: 'rgba(55, 65, 81, 0.8)',
+              color: 'rgba(229, 231, 235, 0.9)',
+            },
+          }
         },
         {
           respectPrefix: true, // true and prefix: 'wt-' then add 'wt-*'

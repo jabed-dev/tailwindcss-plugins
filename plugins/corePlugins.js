@@ -7,7 +7,7 @@ module.exports = {
     fontSize: false, // disable
   },
   plugins: [
-    plugin(function ({ corePlugins }) { // checking if a core plugin is enabled or disable
+    plugin(({ corePlugins }) => { // checking if a core plugin is enabled or disable
       console.log(corePlugins('accentColor')) // true
       console.log(corePlugins('fontSize')) // false
     }),

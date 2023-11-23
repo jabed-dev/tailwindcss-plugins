@@ -21,6 +21,7 @@ module.exports = {
         e,
       }) => {
         // Add your custom styles here
+        // addUtilities()
       },
       {
         // same as a config object
