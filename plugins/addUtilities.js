@@ -1,13 +1,9 @@
 const plugin = require('tailwindcss/plugin')
 
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html'],
   prefix: 'tw-',
   important: true,
-  theme: {
-    extend: {},
-  },
+  theme: {},
   plugins: [
     plugin(({ addUtilities }) => {
       addUtilities(
@@ -23,8 +19,8 @@ module.exports = {
           },
         },
         {
-          respectPrefix: false, // true and prefix: 'wt-' then add 'wt-*'
-          respectImportant: false, // true and important: true then add '* !important'
+          respectPrefix: true, // true and prefix: 'wt-' then add 'wt-*'
+          respectImportant: true, // true and important: true then add '* !important'
         }
       )
     }),

@@ -1,25 +1,32 @@
 const plugin = require('tailwindcss/plugin')
 
-module.exports = plugin(({ matchUtilities, theme }) => {
-    matchUtilities({
-        tab: (value) => ({
-            tabSize: value
-        })
-    }, {
-        values: theme('tabSize')
-    })
-}, {
-    theme: {
-        tabSize: (() => {
-            let _values = {}
-            for (let i = 1; i <= 6; i++) {
-                if (i === 4) {
-                    _values['DEFAULT'] = i
-                    continue
-                }
-                _values[i] = i
-            }
-            return _values
-        })()
-    }
-})
+module.exports = {
+  theme: {
+    tabSize: {
+      2: 2,
+      3: 3,
+      DEFAULT: 4,
+      5: 5,
+      6: 6,
+    },
+  },
+  plugins: [
+    plugin(({ matchUtilities, theme }) => {
+      matchUtilities(
+        {
+          tab: (value) => ({
+            tabSize: value,
+          }),
+        },
+        { 
+          values: theme('tabSize'), // { key: value }
+          type: 'number',
+          respectPrefix: true,
+          respectImportant: true,
+          supportsNegativeValues: true,
+          modifiers: { key: 'value' } // explore in the match-with-modifier.js
+        }
+      )
+    }),
+  ],
+}

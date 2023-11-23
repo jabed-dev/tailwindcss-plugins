@@ -2,13 +2,9 @@
 // custom config can modify plugin config
 
 const plugin = require('tailwindcss/plugin')
-/** @type {import('tailwindcss').Config} */
+
 module.exports = {
-  content: ['./index.html'],
-  darkMode: 'media'
-  theme: {
-    extend: {},
-  },
+  theme: {},
   plugins: [
     plugin(
       ({

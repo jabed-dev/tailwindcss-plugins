@@ -4,9 +4,7 @@ const defaultConfig = require('tailwindcss/defaultConfig') // (default)
 module.exports = {
   content: ['./index.html'],
   darkMode: 'class',
-  theme: {
-    extend: {},
-  },
+  theme: {},
   plugins: [
     plugin(({ config }) => {
       // config values in the user’s and default Tailwind configuration (custom + default)
@@ -17,7 +15,7 @@ module.exports = {
       
       // if config('incorrect') undefined then return second argument
       console.log(config('theme.incorrect', {x: 'xyz'}))
-      // return > {x: 'xyz'}
+      // {x: 'xyz'}
     }),
   ],
 }

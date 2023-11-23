@@ -2,10 +2,7 @@ const plugin = require('tailwindcss/plugin')
 const defaultTheme = require('tailwindcss/defaultTheme') // (default)
 
 module.exports = {
-  content: ['./index.html'],
-  theme: {
-    extend: {},
-  },
+  theme: {},
   plugins: [
     plugin(({ theme }) => {
       // theme values in the user’s and default Tailwind theme (custom + default)
@@ -15,7 +12,7 @@ module.exports = {
       
       // if theme('incorrect') undefined then return second argument
       console.log(theme('incorrect', {x: 'xyz'}))
-      // return > {x: 'xyz'}
+      // {x: 'xyz'}
     }),
   ],
 }
