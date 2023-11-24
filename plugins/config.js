@@ -16,8 +16,9 @@ module.exports = {
       console.log(config('theme.incorrect', {x: 'xyz'}))
       // {x: 'xyz'}
 
-      // get all corePlugins [ ... ] 
+      // get all corePlugins [ ... ]       
       console.log(config().corePlugins)
+      console.log(JSON.stringify(config().corePlugins, null, 2)) // see all
     }),
   ],
 }

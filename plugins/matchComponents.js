@@ -7,7 +7,7 @@ module.exports = {
       ({ matchComponents, theme }) => {
         matchComponents(
           {
-            btn: (value) => ({
+            btn: (value, { modifier }) => ({ // modifier explore in the match-with-modifier.js
               padding: `${theme('spacing.1')}  ${theme('spacing.2')}`,
               border: `1px solid ${theme('colors.' + value + '.400')}`,
               borderRadius: theme('borderRadius.md'),

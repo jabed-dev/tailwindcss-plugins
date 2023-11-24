@@ -12,7 +12,7 @@ module.exports = {
       addVariant('hocus', ['&:hover', '&:focus']) // .hocus\:*:hover | .hocus\:*:focus
       addVariant('inverted-colors', '@media (inverted-colors: inverted)')
       addVariant('my-dark', '.dark &') // .dark .my-dark\:*
-      // addVariant('variant', () => ('&:*')) return string
+      // addVariant('variant', () => { return string })
     }),
   ],
 }

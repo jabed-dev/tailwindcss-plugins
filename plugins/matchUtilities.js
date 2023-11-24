@@ -14,7 +14,7 @@ module.exports = {
     plugin(({ matchUtilities, theme }) => {
       matchUtilities(
         {
-          tab: (value) => ({
+          tab: (value, { modifier }) => ({ // modifier explore in the match-with-modifier.js
             tabSize: value,
           }),
         },

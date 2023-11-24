@@ -11,7 +11,7 @@ module.exports = {
             return `&>:nth-child(${value})`
           },
           {
-            values: theme('child'),
+            values: theme('child'), // { key: value }
           }
         )
       },
