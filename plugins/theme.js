@@ -3,6 +3,14 @@ const defaultTheme = require('tailwindcss/defaultTheme') // (default)
 
 module.exports = {
   theme: {
+    extend: {
+      fontFamily: {
+        // can't use a theme function with the same name like fontFamily
+        // ({theme}) => ({arial: ['Arial', ...theme('fontFamily.sans')]}) 
+        // Error: Maximum call stack size exceeded
+        arial: ['Arial', ...defaultTheme.fontFamily.sans],
+      },
+    }
     backgroundColor: ({ theme, colors, breakpoints }) => {
       console.log(breakpoints({ xl: '1280px' }))
       console.log(colors.slate)
